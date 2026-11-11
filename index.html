@@ -91,15 +91,20 @@ header{
 
 /* HERO */
 .hero{
-  min-height:690px;
+  min-height:750px;
   display:flex;
   align-items:center;
   position:relative;
   background:
-    linear-gradient(90deg,#080808 5%,#080808e8 40%,#08080855 100%),
-    url('images/images.jfif') center/cover;
+    linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.35)),
+    url('./Home-office-design-trends-by-Decorilla-designer-Julissa-R-1024x683-371x.webp') center/cover no-repeat;
 }
-.hero-content{max-width:680px;padding:100px 0}
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:700px;
+  padding:100px 0;
+}
 .eyebrow{
   color:var(--gold);
   font-size:11px;
@@ -261,8 +266,8 @@ section{padding:105px 0}
 .cta{
   text-align:center;
   background:
-  linear-gradient(#080808db,#080808ed),
-  url('images/istockphoto-2235904808-612x612.jpg') center/cover;
+    linear-gradient(#080808db,#080808ed),
+    url('./istockphoto-2235904808-612x612.jpg') center/cover no-repeat;
 }
 .cta h2{font-size:48px;margin-bottom:20px}
 .cta h2 span{color:var(--gold)}
@@ -353,22 +358,8 @@ footer p{
   font-size:12px;font-weight:700;
   box-shadow:0 5px 25px #0009;
 }
-.hero {
-  min-height: 750px;
-  display: flex;
-  align-items: center;
-  position: relative;
-  background:
-    linear-gradient(90deg, rgba(0,0,0,.88), rgba(0,0,0,.35)),
-    url("/Home-office-design-trends-by-Decorilla-designer-Julissa-R-1024x683-371x.webp") center/cover no-repeat;
-}
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 700px;
-}
-
+/* RESPONSIVE */
 @media(max-width:850px){
   .menu-btn{display:block}
   .nav-links{
@@ -409,7 +400,7 @@ footer p{
     <a href="#" class="logo">ABOUT TECH
       <span>STAY ONE STEP AHEAD</span>
     </a>
-    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Open navigation menu">☰</button>
     <nav class="nav-links" id="navLinks">
       <a href="#home" onclick="closeMenu()">Home</a>
       <a href="#about" onclick="closeMenu()">About</a>
@@ -432,11 +423,12 @@ footer p{
     </div>
   </div>
 </section>
+
 <!-- ABOUT -->
 <section id="about">
   <div class="container about-grid">
     <div class="about-img">
-<img src="/imagesoffice (1).jfif" alt="">
+      <img src="./imagesoffice%20(1).jfif" alt="About Tech office">
     </div>
     <div class="about-text">
       <div class="eyebrow">Who We Are</div>
@@ -474,8 +466,7 @@ footer p{
 
     <div class="service-grid">
       <article class="service-card">
-        <img src="/istockphoto-1263731169-612x612.jpg"
-             alt="Network switch and Ethernet cables">
+        <img src="./istockphoto-1263731169-612x612.jpg" alt="Network switch and Ethernet cables">
         <div class="service-content">
           <h3>Cisco Networking</h3>
           <p>Professional network infrastructure, switches, connectivity and structured networking solutions.</p>
@@ -483,8 +474,7 @@ footer p{
       </article>
 
       <article class="service-card">
-        <img src="/istockphoto-2196613675-612x612.jpg"
-             alt="CCTV security camera">
+        <img src="./istockphoto-2196613675-612x612.jpg" alt="CCTV security camera">
         <div class="service-content">
           <h3>CCTV Security</h3>
           <p>Modern surveillance camera systems designed to improve visibility and protect your premises.</p>
@@ -492,8 +482,7 @@ footer p{
       </article>
 
       <article class="service-card">
-        <img src="/istockphoto-2235904808-612x612.jpg"
-             alt="Security operations monitoring">
+        <img src="./istockphoto-2235904808-612x612.jpg" alt="Security operations monitoring">
         <div class="service-content">
           <h3>Monitoring Systems</h3>
           <p>Centralized video monitoring solutions for offices, commercial buildings and facilities.</p>
@@ -507,8 +496,7 @@ footer p{
 <section class="feature">
   <div class="container feature-grid">
     <div>
-      <img src="/istockphoto-2225635774-612x612.jpg"
-           alt="CCTV planning and surveillance equipment">
+      <img src="./istockphoto-2225635774-612x612.jpg" alt="CCTV planning and surveillance equipment">
     </div>
     <div>
       <div class="eyebrow">Security Without Compromise</div>
@@ -535,16 +523,16 @@ footer p{
 
     <div class="gallery-grid">
       <div class="gallery-item">
-        <img src="/istockphoto-2249959085-612x612.jpg" alt="Cisco office">
+        <img src="./istockphoto-2249959085-612x612.jpg" alt="Cisco office">
       </div>
       <div class="gallery-item">
-        <img src="/istockphoto-993770012-612x612.jpg" alt="Retail security monitoring">
+        <img src="./istockphoto-993770012-612x612.jpg" alt="Retail security monitoring">
       </div>
       <div class="gallery-item">
-        <img src="/istockphoto-2276826000-612x612.webp" alt="Security operations">
+        <img src="./istockphoto-2276826000-612x612.webp" alt="Security operations">
       </div>
       <div class="gallery-item">
-        <img src="/istockphoto-644162842-612x612.webp" alt="Network cabling">
+        <img src="./istockphoto-644162842-612x612.webp" alt="Network cabling">
       </div>
     </div>
   </div>
