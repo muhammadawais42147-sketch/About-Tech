@@ -1,0 +1,685 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="About Tech - Premium Cisco Networking, CCTV Security and IT Infrastructure Solutions.">
+<title>ABOUT TECH | Stay One Step Ahead</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+  --black:#090909;
+  --dark:#11110f;
+  --gold:#c6a568;
+  --lightgold:#e4cf9d;
+  --white:#f8f6f1;
+  --grey:#aaa69c;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--black);
+  color:var(--white);
+  font-family:'DM Sans',sans-serif;
+}
+a{text-decoration:none;color:inherit}
+img{width:100%;display:block;object-fit:cover}
+.container{width:90%;max-width:1250px;margin:auto}
+
+header{
+  position:sticky;top:0;z-index:100;
+  background:#090909ed;
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid #c6a56835;
+}
+.nav{
+  min-height:85px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.logo{
+  color:var(--gold);
+  font-size:26px;
+  font-weight:700;
+  letter-spacing:4px;
+}
+.logo span{
+  display:block;
+  color:#eee;
+  font-size:9px;
+  letter-spacing:5px;
+  text-align:center;
+}
+.nav-links{
+  display:flex;gap:32px;align-items:center;
+}
+.nav-links a{
+  color:#ddd;
+  font-size:12px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  transition:.3s;
+}
+.nav-links a:hover{color:var(--gold)}
+.gold-btn{
+  display:inline-block;
+  padding:15px 26px;
+  background:var(--gold);
+  color:#111;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  transition:.3s;
+  border:1px solid var(--gold);
+}
+.gold-btn:hover{
+  background:transparent;
+  color:var(--gold);
+}
+.menu-btn{
+  display:none;
+  background:none;border:0;
+  color:var(--gold);font-size:28px;
+  cursor:pointer;
+}
+
+/* HERO */
+.hero{
+  min-height:690px;
+  display:flex;
+  align-items:center;
+  position:relative;
+  background:
+    linear-gradient(90deg,#080808 5%,#080808e8 40%,#08080855 100%),
+    url('images/images.jfif') center/cover;
+}
+.hero-content{max-width:680px;padding:100px 0}
+.eyebrow{
+  color:var(--gold);
+  font-size:11px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  margin-bottom:25px;
+}
+h1,h2,h3{font-family:'Playfair Display',serif}
+.hero h1{
+  font-size:clamp(45px,7vw,82px);
+  line-height:1.12;
+  font-weight:500;
+}
+.hero h1 span{color:var(--gold)}
+.hero p{
+  color:#c3c0b9;
+  line-height:1.9;
+  margin:25px 0 35px;
+  max-width:540px;
+  font-size:15px;
+}
+.hero-line{
+  height:2px;width:75px;
+  background:var(--gold);
+  margin-top:30px;
+}
+
+/* GENERAL */
+section{padding:105px 0}
+.section-head{text-align:center;margin-bottom:55px}
+.section-head .eyebrow{margin-bottom:16px}
+.section-head h2{
+  font-size:clamp(34px,5vw,52px);
+  font-weight:500;
+}
+.section-head h2 span{color:var(--gold)}
+.section-head p{
+  color:var(--grey);
+  max-width:650px;
+  margin:18px auto 0;
+  line-height:1.8;
+  font-size:14px;
+}
+.gold-line{
+  width:55px;height:2px;
+  background:var(--gold);
+  margin:22px auto;
+}
+
+/* ABOUT */
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:65px;align-items:center;
+}
+.about-img{position:relative}
+.about-img img{
+  height:440px;
+  filter:brightness(.85);
+}
+.about-img:after{
+  content:"";
+  position:absolute;
+  border:1px solid var(--gold);
+  top:15px;left:15px;right:-15px;bottom:-15px;
+  z-index:-1;
+}
+.about-text h2{
+  font-size:46px;font-weight:500;
+  margin-bottom:25px;
+}
+.about-text h2 span{color:var(--gold)}
+.about-text p{
+  color:var(--grey);
+  line-height:1.95;
+  font-size:14px;
+  margin-bottom:18px;
+}
+.facts{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:18px;margin-top:30px;
+}
+.fact{
+  border-left:2px solid var(--gold);
+  padding:8px 15px;
+}
+.fact strong{
+  display:block;color:var(--gold);
+  font-family:'Playfair Display',serif;
+  font-size:23px;
+}
+.fact small{color:#aaa;font-size:11px}
+
+/* SERVICES */
+.services{background:#10100e}
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+.service-card{
+  background:#171714;
+  border:1px solid #ffffff13;
+  transition:.4s;
+}
+.service-card:hover{
+  transform:translateY(-8px);
+  border-color:var(--gold);
+}
+.service-card img{height:240px}
+.service-content{padding:28px}
+.service-content h3{
+  font-size:24px;
+  color:var(--gold);
+  margin-bottom:13px;
+}
+.service-content p{
+  font-size:13px;
+  color:var(--grey);
+  line-height:1.8;
+}
+
+/* FEATURE */
+.feature{
+  background:linear-gradient(120deg,#171612,#090909);
+  border-top:1px solid #c6a56845;
+  border-bottom:1px solid #c6a56845;
+}
+.feature-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;gap:55px;
+}
+.feature img{height:390px}
+.feature h2{font-size:45px;margin-bottom:22px}
+.feature h2 span{color:var(--gold)}
+.feature p{
+  color:var(--grey);font-size:14px;
+  line-height:1.9;margin-bottom:25px;
+}
+
+/* GALLERY */
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+.gallery-item{
+  height:230px;overflow:hidden;
+  border:1px solid #c6a56835;
+}
+.gallery-item img{
+  height:100%;
+  transition:.5s;
+}
+.gallery-item:hover img{transform:scale(1.08)}
+
+/* CTA */
+.cta{
+  text-align:center;
+  background:
+  linear-gradient(#080808db,#080808ed),
+  url('images/istockphoto-2235904808-612x612.jpg') center/cover;
+}
+.cta h2{font-size:48px;margin-bottom:20px}
+.cta h2 span{color:var(--gold)}
+.cta p{
+  color:#bbb;max-width:600px;
+  margin:0 auto 30px;line-height:1.8;
+}
+
+/* CONTACT */
+.contact{background:#10100e}
+.contact-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:55px;
+}
+.contact-info h2{font-size:43px;margin-bottom:25px}
+.contact-info h2 span{color:var(--gold)}
+.contact-info p{
+  color:var(--grey);font-size:14px;
+  line-height:1.9;margin-bottom:25px;
+}
+.contact-detail{
+  border-bottom:1px solid #ffffff18;
+  padding:17px 0;
+}
+.contact-detail small{
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:2px;
+  display:block;margin-bottom:8px;
+}
+.contact-detail a,.contact-detail div{
+  color:#eee;font-size:14px;
+}
+.contact-form{
+  background:#181815;
+  border:1px solid #c6a56845;
+  padding:35px;
+}
+.contact-form h3{
+  color:var(--gold);
+  font-size:28px;margin-bottom:25px;
+}
+.contact-form input,
+.contact-form select,
+.contact-form textarea{
+  width:100%;padding:15px;
+  background:#0d0d0c;
+  border:1px solid #ffffff24;
+  color:white;margin-bottom:15px;
+  font-family:inherit;
+  outline:none;
+}
+.contact-form input:focus,
+.contact-form textarea:focus{
+  border-color:var(--gold);
+}
+.contact-form textarea{
+  min-height:125px;resize:vertical;
+}
+.contact-form button{
+  width:100%;cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+  padding:45px 0;
+  text-align:center;
+  border-top:1px solid #c6a56840;
+}
+.footer-logo{
+  color:var(--gold);font-size:25px;
+  letter-spacing:4px;font-weight:700;
+}
+footer p{
+  color:#888;font-size:12px;
+  margin-top:15px;line-height:1.8;
+}
+.footer-links{
+  display:flex;justify-content:center;
+  gap:25px;margin:22px 0;
+  color:#bbb;font-size:12px;
+}
+.whatsapp{
+  position:fixed;right:22px;bottom:22px;
+  z-index:200;
+  background:#20b866;color:white;
+  padding:15px 20px;border-radius:40px;
+  font-size:12px;font-weight:700;
+  box-shadow:0 5px 25px #0009;
+}
+.hero {
+  min-height: 750px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.88), rgba(0,0,0,.35)),
+    url("/Home-office-design-trends-by-Decorilla-designer-Julissa-R-1024x683-371x.webp") center/cover no-repeat;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+@media(max-width:850px){
+  .menu-btn{display:block}
+  .nav-links{
+    display:none;position:absolute;
+    top:85px;left:0;width:100%;
+    background:#10100e;
+    flex-direction:column;
+    padding:30px;
+    border-bottom:1px solid var(--gold);
+  }
+  .nav-links.active{display:flex}
+  .about-grid,.feature-grid,.contact-grid{
+    grid-template-columns:1fr;
+  }
+  .service-grid{grid-template-columns:1fr 1fr}
+  .gallery-grid{grid-template-columns:1fr 1fr}
+  .about-img{margin-right:15px}
+}
+@media(max-width:550px){
+  section{padding:75px 0}
+  .service-grid{grid-template-columns:1fr}
+  .hero{min-height:600px}
+  .hero-content{padding:75px 0}
+  .facts{grid-template-columns:1fr 1fr}
+  .gallery-item{height:160px}
+  .about-img img{height:300px}
+  .feature img{height:270px}
+  .contact-form{padding:22px}
+  .footer-links{flex-wrap:wrap}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#" class="logo">ABOUT TECH
+      <span>STAY ONE STEP AHEAD</span>
+    </a>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" onclick="closeMenu()">Home</a>
+      <a href="#about" onclick="closeMenu()">About</a>
+      <a href="#services" onclick="closeMenu()">Services</a>
+      <a href="#gallery" onclick="closeMenu()">Gallery</a>
+      <a href="#contact" onclick="closeMenu()">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
+      <div class="eyebrow">Technology · Security · Excellence</div>
+      <h1>Intelligent<br><span>Technology.</span><br>Absolute Security.</h1>
+      <div class="hero-line"></div>
+      <p>Premium networking, Cisco infrastructure and advanced CCTV security solutions designed for businesses that expect more.</p>
+      <a href="#contact" class="gold-btn">Discuss Your Project →</a>
+    </div>
+  </div>
+</section>
+<!-- ABOUT -->
+<section id="about">
+  <div class="container about-grid">
+    <div class="about-img">
+<img src="/imagesoffice (1).jfif" alt="">
+    </div>
+    <div class="about-text">
+      <div class="eyebrow">Who We Are</div>
+      <h2>Excellence Built<br>Through <span>Technology.</span></h2>
+      <p>
+        About Tech was established in 2024 and is
+        registered with the Government of Pakistan.
+        We provide networking, CCTV surveillance and
+        IT infrastructure solutions.
+      </p>
+      <p>
+        Led by Owner and Chairman Sarmad Ahmad,
+        our mission is to deliver dependable technology,
+        professional service and intelligent security.
+      </p>
+      <div class="facts">
+        <div class="fact"><strong>2024</strong><small>Established</small></div>
+        <div class="fact"><strong>01</strong><small>Step Ahead</small></div>
+        <div class="fact"><strong>IT</strong><small>Technology</small></div>
+        <div class="fact"><strong>24/7</strong><small>Security Focus</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Our Expertise</div>
+      <h2>Solutions That <span>Protect & Connect</span></h2>
+      <div class="gold-line"></div>
+      <p>Professional technology solutions for modern businesses, offices and organizations.</p>
+    </div>
+
+    <div class="service-grid">
+      <article class="service-card">
+        <img src="/istockphoto-1263731169-612x612.jpg"
+             alt="Network switch and Ethernet cables">
+        <div class="service-content">
+          <h3>Cisco Networking</h3>
+          <p>Professional network infrastructure, switches, connectivity and structured networking solutions.</p>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <img src="/istockphoto-2196613675-612x612.jpg"
+             alt="CCTV security camera">
+        <div class="service-content">
+          <h3>CCTV Security</h3>
+          <p>Modern surveillance camera systems designed to improve visibility and protect your premises.</p>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <img src="/istockphoto-2235904808-612x612.jpg"
+             alt="Security operations monitoring">
+        <div class="service-content">
+          <h3>Monitoring Systems</h3>
+          <p>Centralized video monitoring solutions for offices, commercial buildings and facilities.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE -->
+<section class="feature">
+  <div class="container feature-grid">
+    <div>
+      <img src="/istockphoto-2225635774-612x612.jpg"
+           alt="CCTV planning and surveillance equipment">
+    </div>
+    <div>
+      <div class="eyebrow">Security Without Compromise</div>
+      <h2>See More.<br><span>Secure More.</span></h2>
+      <p>
+        From camera placement planning to monitoring
+        infrastructure, About Tech helps you build a
+        smarter and more secure environment.
+      </p>
+      <a href="#contact" class="gold-btn">Request Consultation →</a>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Visual Showcase</div>
+      <h2>Technology in <span>Focus</span></h2>
+      <div class="gold-line"></div>
+      <p>Networking and surveillance technology from our selected visual collection.</p>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="/istockphoto-2249959085-612x612.jpg" alt="Cisco office">
+      </div>
+      <div class="gallery-item">
+        <img src="/istockphoto-993770012-612x612.jpg" alt="Retail security monitoring">
+      </div>
+      <div class="gallery-item">
+        <img src="/istockphoto-2276826000-612x612.webp" alt="Security operations">
+      </div>
+      <div class="gallery-item">
+        <img src="/istockphoto-644162842-612x612.webp" alt="Network cabling">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="container">
+    <div class="eyebrow">Let's Build Something Better</div>
+    <h2>Your Vision.<br><span>Our Technology.</span></h2>
+    <p>Have a networking or security project? Talk to our team and take the next step with About Tech.</p>
+    <a href="#contact" class="gold-btn">Contact About Tech →</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Get In Touch</div>
+      <h2>Let's Start a <span>Conversation</span></h2>
+      <div class="gold-line"></div>
+      <p>Tell us what you need. Our team will be happy to hear from you.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>Connect With<br><span>About Tech.</span></h2>
+        <p>Reach out for networking, CCTV security and IT infrastructure enquiries.</p>
+
+        <div class="contact-detail">
+          <small>Call / WhatsApp</small>
+          <a href="tel:+923223147777">+92 322 3147777</a>
+        </div>
+
+        <div class="contact-detail">
+          <small>Email Address</small>
+          <a href="mailto:abouttech@gmal.com">abouttech@gmal.com</a>
+        </div>
+
+        <div class="contact-detail">
+          <small>Main Office</small>
+          <div>Street No. 01, Opposite UMT,<br>Johar Town, Lahore, Pakistan</div>
+        </div>
+
+        <div class="contact-detail">
+          <small>Owner & Chairman</small>
+          <div>Sarmad Ahmad</div>
+        </div>
+
+        <p style="margin-top:25px">
+          <a class="gold-btn"
+             href="https://www.google.com/maps/search/?api=1&query=UMT+Johar+Town+Lahore"
+             target="_blank" rel="noopener">Find Our Location →</a>
+        </p>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <h3>Send An Enquiry</h3>
+        <input id="name" type="text" placeholder="Your Full Name" required>
+        <input id="email" type="email" placeholder="Your Email Address" required>
+        <input id="phone" type="tel" placeholder="Your Phone Number">
+        <select id="service" required>
+          <option value="">Select a Service</option>
+          <option>Cisco Networking</option>
+          <option>CCTV Security Systems</option>
+          <option>Monitoring Systems</option>
+          <option>Other IT Services</option>
+        </select>
+        <textarea id="message" placeholder="Tell us about your project..." required></textarea>
+        <button type="submit" class="gold-btn">Send via WhatsApp →</button>
+        <p style="font-size:11px;color:#aaa;margin-top:13px">
+          Your message will open in WhatsApp for you to send.
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-logo">ABOUT TECH</div>
+    <p>STAY ONE STEP AHEAD</p>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <p>© 2026 About Tech. All Rights Reserved.<br>
+       Johar Town, Lahore, Pakistan</p>
+  </div>
+</footer>
+
+<a class="whatsapp"
+   href="https://wa.me/923223147777"
+   target="_blank" rel="noopener">WhatsApp Us ↗</a>
+
+<script>
+function toggleMenu(){
+  document.getElementById('navLinks').classList.toggle('active');
+}
+function closeMenu(){
+  document.getElementById('navLinks').classList.remove('active');
+}
+
+document.getElementById('contactForm').addEventListener('submit',function(e){
+  e.preventDefault();
+
+  const name=document.getElementById('name').value.trim();
+  const email=document.getElementById('email').value.trim();
+  const phone=document.getElementById('phone').value.trim();
+  const service=document.getElementById('service').value;
+  const message=document.getElementById('message').value.trim();
+
+  const enquiry=
+`Hello About Tech!
+
+I want to make an enquiry.
+
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+Service: ${service}
+
+Message:
+${message}`;
+
+  const whatsappURL=
+    'https://wa.me/923223147777?text='+
+    encodeURIComponent(enquiry);
+
+  window.open(whatsappURL,'_blank');
+});
+</script>
+
+</body>
+</html>
